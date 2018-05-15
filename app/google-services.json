@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "762259932660",
+    "firebase_url": "https://arturoconsulting-ecbfd.firebaseio.com",
+    "project_id": "arturoconsulting-ecbfd",
+    "storage_bucket": "arturoconsulting-ecbfd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:762259932660:android:b5f2ef8b5224e220",
+        "android_client_info": {
+          "package_name": "com.arturofilio.arturoconsulting"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "762259932660-9l07ssto1dosild5d5s01sltd2h3cksb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBedevOA_ZT3Wbe8EIG8Kn4LRPEPAAlVw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
