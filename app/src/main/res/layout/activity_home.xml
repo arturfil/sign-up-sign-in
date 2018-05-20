@@ -32,7 +32,8 @@
             android:layout_height="match_parent"
             android:id="@+id/relLayout2">
 
-            <!--<include layout="@layout/layout_center_viewpager"/>-->
+            <!--<include layout="@layout/item_exercise"-->
+                <!--android:id="@+id/relLayout3"/>-->
 
         </RelativeLayout>
 

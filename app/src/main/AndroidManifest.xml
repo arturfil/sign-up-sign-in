@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Welcome"></activity>
+        <activity android:name=".Home.HomeActivity"></activity>
+        <activity android:name=".AlertsActivity"></activity>
+        <activity android:name=".ProfileActivity"></activity>
     </application>
 
 </manifest>

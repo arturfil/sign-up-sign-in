@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
+import com.arturofilio.arturoconsulting.Home.HomeActivity;
 import com.arturofilio.arturoconsulting.Model.User;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -121,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
                                 .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                                     @Override
                                     public void onSuccess(AuthResult authResult) {
-                                        startActivity(new Intent(MainActivity.this, Welcome.class));
+                                        startActivity(new Intent(MainActivity.this, HomeActivity.class));
                                         finish();
                                     }
                                 }).addOnFailureListener(new OnFailureListener() {

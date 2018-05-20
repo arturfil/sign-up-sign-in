@@ -16,8 +16,31 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="200dp"
+            android:src="@drawable/chest_workout"
             android:id="@+id/exercise_image"
             android:scaleType="centerInside"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/chest_workout"
+            android:id="@+id/exercise_image2"
+            android:scaleType="centerInside"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/chest_workout"
+            android:id="@+id/exercise_image3"
+            android:scaleType="centerInside"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/chest_workout"
+            android:id="@+id/exercise_image4"
+            android:scaleType="centerInside"/>
+
 
         <TextView
             android:layout_width="wrap_content"

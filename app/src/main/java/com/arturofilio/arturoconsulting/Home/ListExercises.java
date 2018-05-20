@@ -39,11 +39,6 @@ public class ListExercises extends Activity {
     private void initData() {
 
         exerciseList.add(new Exercise(R.drawable.chest_workout, "Chest Workout"));
-        exerciseList.add(new Exercise(R.drawable.chest_workout, "Chest Workout"));
-        exerciseList.add(new Exercise(R.drawable.chest_workout, "Chest Workout"));
-        exerciseList.add(new Exercise(R.drawable.chest_workout, "Chest Workout"));
-        exerciseList.add(new Exercise(R.drawable.chest_workout, "Chest Workout"));
-        exerciseList.add(new Exercise(R.drawable.chest_workout, "Chest Workout"));
 
     }
 }
