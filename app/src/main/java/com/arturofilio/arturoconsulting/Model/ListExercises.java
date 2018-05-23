@@ -34,14 +34,21 @@ public class ListExercises extends Activity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate: starting list view");
-        setContentView(R.layout.activity_list_exercises);
+        setContentView(R.layout.listview_layout);
+
+
+
         mListView = (ListView) findViewById(R.id.listView);
 
         ArrayList<Exercise> list = new ArrayList<>();
-        list.add(new Exercise("@drawable//" + R.drawable.chest_workout, "Chest Workout"));
-        list.add(new Exercise("@drawable//" + R.drawable.back_workout, "Chest Workout"));
-        list.add(new Exercise("@drawable//" + R.drawable.biceps_workout, "Chest Workout"));
-        list.add(new Exercise("@drawable//" + R.drawable.legs_workout, "Chest Workout"));
+        list.add(new Exercise("drawable://" + R.drawable.chest_workout, "Chest Workout"));
+        list.add(new Exercise("drawable://" + R.drawable.back_workout, "Chest Workout"));
+        list.add(new Exercise("drawable://" + R.drawable.biceps_workout, "Chest Workout"));
+        list.add(new Exercise("drawable://" + R.drawable.legs_workout, "Chest Workout"));
+        list.add(new Exercise("drawable://" + R.drawable.chest_workout, "Chest Workout"));
+        list.add(new Exercise("drawable://" + R.drawable.back_workout, "Chest Workout"));
+        list.add(new Exercise("drawable://" + R.drawable.biceps_workout, "Chest Workout"));
+        list.add(new Exercise("drawable://" + R.drawable.legs_workout, "Chest Workout"));
 
         CustomListAdapter adapter = new CustomListAdapter(this, R.layout.activity_list_exercises, list);
         mListView.setAdapter(adapter);
