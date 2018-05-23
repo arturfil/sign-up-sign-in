@@ -8,7 +8,6 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import com.arturofilio.arturoconsulting.Alerts.AlertsActivity;
-import com.arturofilio.arturoconsulting.Home.HomeActivity;
 import com.arturofilio.arturoconsulting.Model.ListExercises;
 import com.arturofilio.arturoconsulting.Profile.ProfileActivity;
 import com.arturofilio.arturoconsulting.R;
@@ -33,8 +32,8 @@ public class BottomNavigationViewHelper {
 
                 switch (item.getItemId()){
                     case R.id.ic_house:
-                        Intent inten1 = new Intent(context, HomeActivity.class);
-                        context.startActivity(inten1);
+                        Intent intent1 = new Intent(context, ListExercises.class);
+                        context.startActivity(intent1);
                         break;
 
                     case R.id.ic_alert:

@@ -1,9 +1,7 @@
 package com.arturofilio.arturoconsulting.Adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -69,7 +67,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewHolder
 
     @Override
     public void onBindViewHolder(RecyclerViewHolder holder, int position) {
-        holder.image.setImageResource(exerciseList.get(position).getIamge_id());
+        holder.text.setText(exerciseList.get(position).getImage_id());
         holder.text.setText(exerciseList.get(position).getName());
 
         holder.setItemClickListener(new ItemClickListener() {

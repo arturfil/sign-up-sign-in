@@ -6,20 +6,20 @@ package com.arturofilio.arturoconsulting.Model;
 
 public class Exercise {
 
-    private int image_id;
+    private String image_id;
     private String name;
 
-    public Exercise(int iamge_id, String name) {
-        this.image_id = iamge_id;
+    public Exercise(String image_id, String name) {
+        this.image_id = image_id;
         this.name = name;
     }
 
-    public int getIamge_id() {
+    public String getImage_id() {
         return image_id;
     }
 
-    public void setIamge_id(int iamge_id) {
-        this.image_id = iamge_id;
+    public void setImage_id(String image_id) {
+        this.image_id = image_id;
     }
 
     public String getName() {

@@ -4,20 +4,17 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 
-import com.arturofilio.arturoconsulting.Adapter.RecyclerViewAdapter;
-import com.arturofilio.arturoconsulting.Home.HomeActivity;
-import com.arturofilio.arturoconsulting.Model.Exercise;
+import com.arturofilio.arturoconsulting.Adapter.CustomListAdapter;
 import com.arturofilio.arturoconsulting.R;
 import com.arturofilio.arturoconsulting.Utils.BottomNavigationViewHelper;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by arturofiliovilla on 5/17/18.
@@ -25,46 +22,42 @@ import java.util.List;
 
 public class ListExercises extends Activity {
 
-    private static final String TAG = "ListExercises" ;
+    private ListView mListView;
 
-    List<Exercise> exerciseList = new ArrayList<>();
-    RecyclerView.LayoutManager layoutManager;
-    RecyclerView recyclerView;
-    RecyclerViewAdapter adapter;
+    private static final String TAG = "ListExercises" ;
+    private static final int ACTIVITY_NUM = 0;
+
+    private Context mContext = ListExercises.this;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG, "onCreate: starting list view");
         setContentView(R.layout.activity_list_exercises);
+        mListView = (ListView) findViewById(R.id.listView);
 
-        initData();
+        ArrayList<Exercise> list = new ArrayList<>();
+        list.add(new Exercise("@drawable//" + R.drawable.chest_workout, "Chest Workout"));
+        list.add(new Exercise("@drawable//" + R.drawable.back_workout, "Chest Workout"));
+        list.add(new Exercise("@drawable//" + R.drawable.biceps_workout, "Chest Workout"));
+        list.add(new Exercise("@drawable//" + R.drawable.legs_workout, "Chest Workout"));
 
-        recyclerView = (RecyclerView)findViewById(R.id.list_ex);
-        adapter = new RecyclerViewAdapter(exerciseList, getBaseContext());
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(adapter);
-    }
+        CustomListAdapter adapter = new CustomListAdapter(this, R.layout.activity_list_exercises, list);
+        mListView.setAdapter(adapter);
 
-    private void initData() {
-
-        exerciseList.add(new Exercise(R.drawable.chest_workout, "Chest Workout"));
-        exerciseList.add(new Exercise(R.drawable.back_workout, "Back Workout"));
-        exerciseList.add(new Exercise(R.drawable.biceps_workout, "Biceps Workout"));
-        exerciseList.add(new Exercise(R.drawable.legs_workout, "Legs Workout"));
-        
         setupBottomNavigationView();
-
     }
 
     /**
      * BottomNavigationView setup
      */
     private void setupBottomNavigationView() {
-        Log.d(TAG, "setupBottomNavigationView: ");
+        Log.d(TAG, "setupBottomNavigationView: setting up BottomNavigationView");
         BottomNavigationViewEx bottomNavigationViewEx = (BottomNavigationViewEx) findViewById(R.id.bottomNavigationViewBar);
-//        BottomNavigationViewHelper.envableNavigation(, bottomNavigationViewEx);
+        BottomNavigationViewHelper.envableNavigation(mContext, bottomNavigationViewEx);
         Menu menu = bottomNavigationViewEx.getMenu();
-        MenuItem menuItem = menu.getItem(0);
+        MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
     }
 }
