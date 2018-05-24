@@ -50,7 +50,7 @@ public class ListExercises extends Activity {
         list.add(new Exercise("drawable://" + R.drawable.biceps_workout, "Chest Workout"));
         list.add(new Exercise("drawable://" + R.drawable.legs_workout, "Chest Workout"));
 
-        CustomListAdapter adapter = new CustomListAdapter(this, R.layout.activity_list_exercises, list);
+        CustomListAdapter adapter = new CustomListAdapter(this, R.layout.exercise_card, list);
         mListView.setAdapter(adapter);
 
         setupBottomNavigationView();

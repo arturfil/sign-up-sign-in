@@ -6,8 +6,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -89,10 +87,10 @@ public class CustomListAdapter  extends ArrayAdapter<Exercise> {
             }
 
 
-            Animation animation = AnimationUtils.loadAnimation(mContext,
-                    (position > lastPosition) ? R.anim.load_down_anim : R.anim.load_up_anim);
-            result.startAnimation(animation);
-            lastPosition = position;
+//            Animation animation = AnimationUtils.loadAnimation(mContext,
+//                    (position > lastPosition) ? R.anim.load_down_anim : R.anim.load_up_anim);
+//            result.startAnimation(animation);
+//            lastPosition = position;
 
             holder.title.setText(title);
 
