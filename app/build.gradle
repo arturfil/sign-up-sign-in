@@ -31,24 +31,33 @@ dependencies {
 
     //Universal Image Loader
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
     //Design Library for Coordinator Layout and Toolbar
     compile 'com.android.support:design:27.1.1'
     compile 'com.android.support:appcompat-v7:27.1.1'
+
     //noinspection GradleCompatible
     compile 'com.android.support:cardview-v7:26.+'
+
     //BottomNavigationViewEx Library
     compile 'com.github.ittianyu:BottomNavigationViewEx:1.2.4'
     compile 'com.android.support:design:27.1.1'
+
     //Circle ImageView
     compile 'de.hdodenhof:circleimageview:2.2.0'
+
     //Universal Image Loader
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
     //firebase authentication
     compile 'com.google.firebase:firebase-auth:10.2.6'
+
     //firebase databse
     compile 'com.google.firebase:firebase-database:10.2.6'
+
     //firebase storage
     compile 'com.google.firebase:firebase-storage:10.2.6'
+
     //Extra Library
     compile 'uk.co.chrisjenx:calligraphy:2.3.0'
     compile 'com.rengwuxian.materialedittext:library:2.1.4'
