@@ -20,6 +20,7 @@
         <!--<activity android:name=".Model.ListExercises"></activity>-->
         <activity android:name=".Alerts.AlertsActivity"></activity>
         <activity android:name=".Profile.ProfileActivity"></activity>
+        <activity android:name=".Profile.AccountSettingsActivity"></activity>
     </application>
 
 </manifest>
