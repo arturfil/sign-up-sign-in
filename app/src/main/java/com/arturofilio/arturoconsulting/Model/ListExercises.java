@@ -2,7 +2,9 @@ package com.arturofilio.arturoconsulting.Model;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.Menu;
@@ -10,8 +12,11 @@ import android.view.MenuItem;
 import android.widget.ListView;
 
 import com.arturofilio.arturoconsulting.Adapter.CustomListAdapter;
+import com.arturofilio.arturoconsulting.Login.LoginActivity;
 import com.arturofilio.arturoconsulting.R;
 import com.arturofilio.arturoconsulting.Utils.BottomNavigationViewHelper;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
 import java.util.ArrayList;
@@ -29,6 +34,9 @@ public class ListExercises extends Activity {
 
     private Context mContext = ListExercises.this;
 
+    //firebase
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,6 +62,7 @@ public class ListExercises extends Activity {
         mListView.setAdapter(adapter);
 
         setupBottomNavigationView();
+        setupFirebaseAuth();
     }
 
     /**
@@ -67,4 +76,63 @@ public class ListExercises extends Activity {
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
     }
+
+    /*
+    ---------------------------------------------Firebase Auth ------------------------------------>
+     */
+
+    private void checkCurrentUser(FirebaseUser user) {
+        Log.d(TAG, "checkCurrentUser: checking if user is logged in");
+
+        /**
+         * check to see if the @param 'user' is logged in.
+         */
+        if(user == null) {
+            Intent intent = new Intent(mContext, LoginActivity.class);
+            startActivity(intent);
+        }
+    }
+
+    /**
+     * Setup the firebase auth object
+     */
+    private void setupFirebaseAuth() {
+        Log.d(TAG, "setupFirebaseAuth: setting up firebase Auth");
+
+        mAuth = FirebaseAuth.getInstance();
+
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+
+                //check if the user is logged in
+                checkCurrentUser(user);
+
+                if (user != null) {
+                    //User is signed in
+                    Log.d(TAG, "onAuthStateChanged: signed_in" + user.getUid());
+                } else {
+                    // User is signed out
+                    Log.d(TAG, "onAuthStateChanged: signed_out");
+                }
+            }
+        };
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
+        checkCurrentUser(mAuth.getCurrentUser());
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (mAuthListener != null) {
+            mAuth.addAuthStateListener(mAuthListener);
+        }
+    }
+
 }

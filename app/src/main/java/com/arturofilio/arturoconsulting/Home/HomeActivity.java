@@ -50,7 +50,7 @@ public class HomeActivity extends AppCompatActivity {
         menuItem.setChecked(true);
     }
 
-/*
+    /*
     ---------------------------------------------Firebase Auth ------------------------------------>
      */
 
@@ -97,6 +97,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         mAuth.addAuthStateListener(mAuthStateListerner);
+        checkCurrentUser(mAuth.getCurrentUser());
     }
 
     @Override
