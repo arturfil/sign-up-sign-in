@@ -63,6 +63,8 @@ public class ListExercises extends Activity {
 
         setupBottomNavigationView();
         setupFirebaseAuth();
+
+
     }
 
     /**

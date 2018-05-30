@@ -103,7 +103,7 @@ public class LoginActivity extends AppCompatActivity {
                                         mPleaseWait.setVisibility(View.GONE);
                                         mProgressBar.setVisibility(View.GONE);
                                     } else {
-                                        Toast.makeText(LoginActivity.this, "Signed In Succesfuly!", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(LoginActivity.this, "Signed In Successfully!", Toast.LENGTH_SHORT).show();
                                         mPleaseWait.setVisibility(View.GONE);
                                         mProgressBar.setVisibility(View.GONE);
                                     }
