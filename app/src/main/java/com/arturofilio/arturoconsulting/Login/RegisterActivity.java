@@ -156,6 +156,9 @@ public class RegisterActivity extends AppCompatActivity {
 
                         }
                     });
+
+                    finish();
+
                 } else {
                     // User is signed out
                     Log.d(TAG, "onAuthStateChanged: signed_out");
