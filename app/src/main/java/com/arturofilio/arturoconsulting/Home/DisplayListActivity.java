@@ -1,14 +1,19 @@
 package com.arturofilio.arturoconsulting.Home;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.arturofilio.arturoconsulting.Adapter.RecyclerViewAdapter;
 import com.arturofilio.arturoconsulting.R;
+import com.arturofilio.arturoconsulting.Utils.BottomNavigationViewHelper;
+import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 
 import java.util.ArrayList;
 
@@ -17,6 +22,10 @@ public class DisplayListActivity extends AppCompatActivity {
 
     private static final String TAG = "DisplayListActivity";
 
+    private static final int ACTIVITY_NUM = 1;
+
+    private Context mContext = DisplayListActivity.this;
+
     //vars
     private ArrayList<String> mNames = new ArrayList<>();
     private ArrayList<String> mImageUrls = new ArrayList<>();
@@ -24,10 +33,25 @@ public class DisplayListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.recycler_view);
         Log.d(TAG, "onCreate: startted.");
 
         initImagebitmap();
+        setupBottomNavigationView();
+    }
+
+    /**
+     * BottomNavigationView setup
+     */
+    private void setupBottomNavigationView() {
+        Log.d(TAG, "setupBottomNavigationView: setting up BottomNavigationView");
+        BottomNavigationViewEx bottomNavigationViewEx = (BottomNavigationViewEx) findViewById(R.id.bottomNavigationViewBar);
+        BottomNavigationViewHelper.envableNavigation(mContext, bottomNavigationViewEx);
+        Menu menu = bottomNavigationViewEx.getMenu();
+        MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
+        menuItem.setChecked(true);
     }
 
     private void initImagebitmap() {

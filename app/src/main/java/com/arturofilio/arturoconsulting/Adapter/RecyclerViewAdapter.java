@@ -1,6 +1,7 @@
 package com.arturofilio.arturoconsulting.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -11,6 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.arturofilio.arturoconsulting.Home.GalleryActivity;
 import com.arturofilio.arturoconsulting.R;
 import com.bumptech.glide.Glide;
 
@@ -59,6 +61,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 Log.d(TAG, "onClick: clicked on: " + mImagesNames.get(position));
 
                 Toast.makeText(mContext, mImagesNames.get(position), Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(mContext, GalleryActivity.class);
+                intent.putExtra("image_url", mImages.get(position));
+                intent.putExtra("image_name", mImagesNames.get(position));
+                mContext.startActivity(intent);
+
             }
         });
     }
