@@ -7,7 +7,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.util.Log;
 import android.view.MenuItem;
 
-import com.arturofilio.arturoconsulting.Alerts.AlertsActivity;
+import com.arturofilio.arturoconsulting.Home.DisplayListActivity;
 import com.arturofilio.arturoconsulting.Model.ListExercises;
 import com.arturofilio.arturoconsulting.Profile.ProfileActivity;
 import com.arturofilio.arturoconsulting.R;
@@ -39,7 +39,7 @@ public class BottomNavigationViewHelper {
                     case R.id.ic_alert:
                         //create the other intents for the different activities in the bottom menu nav bar
                         //item click listener for the alert's activity
-                        Intent intent2 = new Intent(context, AlertsActivity.class);
+                        Intent intent2 = new Intent(context, DisplayListActivity.class);
                         context.startActivity(intent2);
                         break;
 
