@@ -82,8 +82,11 @@ public class SignOutFragment extends android.support.v4.app.Fragment {
                     Log.d(TAG, "onAuthStateChanged: signed_out");
 
                     Log.d(TAG, "onAuthStateChanged: navigating back to Log in Screen");
+
+                    //if it keeps on giving trouble you can get rid of the next three lines and it still works.
+
                     Intent intent = new Intent(getActivity(), LoginActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(intent);
                 }
             }

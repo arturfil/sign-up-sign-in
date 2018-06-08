@@ -6,10 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.arturofilio.arturoconsulting.Adapter.CustomListAdapter;
 import com.arturofilio.arturoconsulting.Login.LoginActivity;
@@ -34,6 +38,8 @@ public class ListExercises extends Activity {
 
     private Context mContext = ListExercises.this;
 
+    private CardView cardView;
+
     //firebase
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -48,7 +54,7 @@ public class ListExercises extends Activity {
 
         mListView = (ListView) findViewById(R.id.listView);
 
-        ArrayList<Exercise> list = new ArrayList<>();
+        final ArrayList<Exercise> list = new ArrayList<>();
         list.add(new Exercise("drawable://" + R.drawable.chest_workout, "Chest Workout"));
         list.add(new Exercise("drawable://" + R.drawable.back_workout, "Chest Workout"));
         list.add(new Exercise("drawable://" + R.drawable.biceps_workout, "Chest Workout"));
@@ -60,6 +66,14 @@ public class ListExercises extends Activity {
 
         CustomListAdapter adapter = new CustomListAdapter(this, R.layout.exercise_card, list);
         mListView.setAdapter(adapter);
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int i, long id) {
+                Log.d(TAG, "onItemClick: name: " + list.get(i));
+                Toast.makeText(ListExercises.this, "name: " + list.get(i), Toast.LENGTH_SHORT).show();
+            }
+        });
 
         setupBottomNavigationView();
         setupFirebaseAuth();

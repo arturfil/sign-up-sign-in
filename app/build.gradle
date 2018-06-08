@@ -32,6 +32,13 @@ dependencies {
     //Universal Image Loader
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
 
+    //recycler view
+    compile 'com.android.support:recyclerview-v7:27.0.2'
+
+    //glide Libray
+    implementation 'com.github.bumptech.glide:glide:4.4.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.4.0'
+
     //Design Library for Coordinator Layout and Toolbar
     compile 'com.android.support:design:27.1.1'
     compile 'com.android.support:appcompat-v7:27.1.1'
@@ -61,5 +68,8 @@ dependencies {
     //Extra Library
     compile 'uk.co.chrisjenx:calligraphy:2.3.0'
     compile 'com.rengwuxian.materialedittext:library:2.1.4'
+
+    //Splash Screen Library
+    compile 'gr.pantrif:easy-android-splash-screen:0.0.1'
 }
 apply plugin: 'com.google.gms.google-services'

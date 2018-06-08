@@ -28,7 +28,7 @@ public class LoginActivity extends AppCompatActivity {
 
     //firebase
     private FirebaseAuth mAuth;
-    private FirebaseAuth.AuthStateListener mAuthStateListerner;
+    private FirebaseAuth.AuthStateListener mAuthStateListener;
 
     //widgets
     private Context mContext;
@@ -57,7 +57,6 @@ public class LoginActivity extends AppCompatActivity {
 
     private boolean isStringNull(String string) {
         Log.d(TAG, "isStringNull: checking if string is null");
-
         if(string.equals("")) {
             return true;
         } else {
@@ -155,7 +154,7 @@ public class LoginActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        mAuthStateListerner = new FirebaseAuth.AuthStateListener() {
+        mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
@@ -174,14 +173,14 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        mAuth.addAuthStateListener(mAuthStateListerner);
+        mAuth.addAuthStateListener(mAuthStateListener);
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        if (mAuthStateListerner != null) {
-            mAuth.addAuthStateListener(mAuthStateListerner);
+        if (mAuthStateListener != null) {
+            mAuth.addAuthStateListener(mAuthStateListener);
         }
     }
 
