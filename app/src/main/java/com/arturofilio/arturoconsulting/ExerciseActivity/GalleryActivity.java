@@ -1,4 +1,4 @@
-package com.arturofilio.arturoconsulting.Home;
+package com.arturofilio.arturoconsulting.ExerciseActivity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

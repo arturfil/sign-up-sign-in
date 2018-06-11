@@ -32,14 +32,14 @@ public class BottomNavigationViewHelper {
 
                 switch (item.getItemId()){
                     case R.id.ic_house:
-                        Intent intent1 = new Intent(context, ListExercises.class);
+                        Intent intent1 = new Intent(context, DisplayListActivity.class);
                         context.startActivity(intent1);
                         break;
 
                     case R.id.ic_alert:
                         //create the other intents for the different activities in the bottom menu nav bar
                         //item click listener for the alert's activity
-                        Intent intent2 = new Intent(context, DisplayListActivity.class);
+                        Intent intent2 = new Intent(context ,ListExercises.class);
                         context.startActivity(intent2);
                         break;
 

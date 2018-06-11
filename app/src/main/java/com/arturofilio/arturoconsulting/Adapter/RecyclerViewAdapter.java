@@ -8,17 +8,16 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.arturofilio.arturoconsulting.Home.GalleryActivity;
+import com.arturofilio.arturoconsulting.ExerciseActivity.GalleryActivity;
 import com.arturofilio.arturoconsulting.R;
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
 
@@ -78,7 +77,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        CircleImageView image;
+        ImageView image;
         TextView imageName;
         RelativeLayout parentLayout;
 

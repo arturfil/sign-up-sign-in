@@ -22,18 +22,20 @@ public class DisplayListActivity extends AppCompatActivity {
 
     private static final String TAG = "DisplayListActivity";
 
-    private static final int ACTIVITY_NUM = 1;
+    private static final int ACTIVITY_NUM = 0;
 
     private Context mContext = DisplayListActivity.this;
 
     //vars
     private ArrayList<String> mNames = new ArrayList<>();
     private ArrayList<String> mImageUrls = new ArrayList<>();
+    private RecyclerView mListView;
+
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
 
         setContentView(R.layout.recycler_view);
         Log.d(TAG, "onCreate: startted.");
@@ -57,34 +59,34 @@ public class DisplayListActivity extends AppCompatActivity {
     private void initImagebitmap() {
         Log.d(TAG, "initImagebitmap: preparing bitmap");
 
-        mImageUrls.add("https://c1.staticflickr.com/5/4636/25316407448_de5fbf183d_o.jpg");
-        mNames.add("Havasu Falls");
+        mImageUrls.add("https://images.pexels.com/photos/896058/pexels-photo-896058.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+        mNames.add("Biceps");
 
-        mImageUrls.add("https://i.redd.it/tpsnoz5bzo501.jpg");
-        mNames.add("Trondheim");
+        mImageUrls.add("https://images.pexels.com/photos/497934/pexels-photo-497934.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+        mNames.add("Legs");
 
-        mImageUrls.add("https://i.redd.it/qn7f9oqu7o501.jpg");
-        mNames.add("Portugal");
+        mImageUrls.add("https://images.pexels.com/photos/416778/pexels-photo-416778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+        mNames.add("Abdominal");
 
-        mImageUrls.add("https://i.redd.it/j6myfqglup501.jpg");
-        mNames.add("Rocky Mountain National Park");
-
-
-        mImageUrls.add("https://i.redd.it/0h2gm1ix6p501.jpg");
-        mNames.add("Mahahual");
-
-        mImageUrls.add("https://i.redd.it/k98uzl68eh501.jpg");
-        mNames.add("Frozen Lake");
+        mImageUrls.add("https://images.pexels.com/photos/812746/pexels-photo-812746.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+        mNames.add("Chest");
 
 
-        mImageUrls.add("https://i.redd.it/glin0nwndo501.jpg");
-        mNames.add("White Sands Desert");
+        mImageUrls.add("https://images.pexels.com/photos/819691/workout-fitness-street-workout-trees-819691.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+        mNames.add("Back");
 
-        mImageUrls.add("https://i.redd.it/obx4zydshg601.jpg");
-        mNames.add("Austrailia");
+        mImageUrls.add("https://cdn.pixabay.com/photo/2015/02/27/17/44/weights-652488_960_720.jpg");
+        mNames.add("Shoulders");
 
-        mImageUrls.add("https://i.imgur.com/ZcLLrkY.jpg");
-        mNames.add("Washington");
+
+        mImageUrls.add("https://images.pexels.com/photos/1144864/pexels-photo-1144864.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+        mNames.add("Triceps");
+
+        mImageUrls.add("https://images.pexels.com/photos/931323/pexels-photo-931323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+        mNames.add("Calisthenics");
+
+        mImageUrls.add("https://images.pexels.com/photos/936094/pexels-photo-936094.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+        mNames.add("Cardio");
 
         initRecyclerView();
     }

@@ -34,7 +34,7 @@ public class ListExercises extends Activity {
     private ListView mListView;
 
     private static final String TAG = "ListExercises" ;
-    private static final int ACTIVITY_NUM = 0;
+    private static final int ACTIVITY_NUM = 1;
 
     private Context mContext = ListExercises.this;
 
