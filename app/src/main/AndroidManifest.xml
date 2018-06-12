@@ -20,7 +20,7 @@
         </activity>
         <!--<activity android:name=".Home.HomeActivity"></activity>-->
         <activity android:name=".ExerciseActivity.GalleryActivity"></activity>
-        <activity android:name=".Model.ListExercises"></activity>
+        <activity android:name=".Home.ListExercises"></activity>
         <activity android:name=".Alerts.AlertsActivity"></activity>
         <activity android:name=".Profile.ProfileActivity"></activity>
         <activity android:name=".Profile.AccountSettingsActivity"></activity>

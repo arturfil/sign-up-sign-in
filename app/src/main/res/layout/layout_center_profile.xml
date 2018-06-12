@@ -53,7 +53,8 @@
                         android:text="user_name"
                         android:textSize="25dp"
                         android:layout_marginTop="10dp"
-                        android:gravity="center"/>
+                        android:gravity="center"
+                        android:id="@+id/user_name"/>
 
                 </RelativeLayout>
 
@@ -97,7 +98,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/description1"
+                    android:id="@+id/desc_bmi"
                     android:textColor="@color/black"
                     android:text="Body Mass Index = 3x"
                     android:textSize="16sp"
@@ -107,7 +108,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/description2"
+                    android:id="@+id/desc_muscle"
                     android:textColor="@color/black"
                     android:text="Muscle Mass % = 40%"
                     android:textSize="16sp"
@@ -117,7 +118,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/description3"
+                    android:id="@+id/desc_fat"
                     android:textColor="@color/black"
                     android:text="Body Fat % = 40%"
                     android:textSize="16sp"
@@ -127,7 +128,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/description4"
+                    android:id="@+id/desc_height"
                     android:textColor="@color/black"
                     android:text="Height = 6,1' FT."
                     android:textSize="16sp"
@@ -137,12 +138,21 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/description5"
+                    android:id="@+id/desc_weight"
                     android:textColor="@color/black"
                     android:text="Weigth = 173 LBs."
                     android:textSize="16sp"
                     android:layout_marginTop="5dp"
                     />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/desc_activity"
+                    android:text="Daily Activity = Moderate"
+                    android:layout_marginTop="5dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="match_parent"

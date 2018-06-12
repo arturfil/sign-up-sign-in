@@ -1,4 +1,4 @@
-package com.arturofilio.arturoconsulting.Model;
+package com.arturofilio.arturoconsulting.Home;
 
 import android.app.Activity;
 import android.content.Context;
@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.arturofilio.arturoconsulting.Adapter.CustomListAdapter;
 import com.arturofilio.arturoconsulting.Login.LoginActivity;
+import com.arturofilio.arturoconsulting.Model.Exercise;
 import com.arturofilio.arturoconsulting.R;
 import com.arturofilio.arturoconsulting.Utils.BottomNavigationViewHelper;
 import com.google.firebase.auth.FirebaseAuth;

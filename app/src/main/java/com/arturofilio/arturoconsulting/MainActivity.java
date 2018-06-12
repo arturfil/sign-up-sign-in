@@ -14,7 +14,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
-import com.arturofilio.arturoconsulting.Model.ListExercises;
+import com.arturofilio.arturoconsulting.Home.ListExercises;
 import com.arturofilio.arturoconsulting.Model.User;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;

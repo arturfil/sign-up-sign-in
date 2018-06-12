@@ -8,7 +8,7 @@ import android.util.Log;
 import android.view.MenuItem;
 
 import com.arturofilio.arturoconsulting.Home.DisplayListActivity;
-import com.arturofilio.arturoconsulting.Model.ListExercises;
+import com.arturofilio.arturoconsulting.Home.ListExercises;
 import com.arturofilio.arturoconsulting.Profile.ProfileActivity;
 import com.arturofilio.arturoconsulting.R;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
