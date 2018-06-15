@@ -129,12 +129,12 @@ public class FirebaseMethods {
                 0,
                 0,
                 StringManipulation.condenseUsername(name),
-                fat,
-                bmi,
-                muscle_mass,
-                daily_activity,
-                height,
-                weight,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 prophile_photo
         );
 
@@ -150,7 +150,7 @@ public class FirebaseMethods {
      * @param dataSnapshot
      * @return
      */
-    private UserSettings getUserSettings(DataSnapshot dataSnapshot) {
+    public UserSettings getUserSettings(DataSnapshot dataSnapshot) {
         Log.d(TAG, "getUserAccountSettings: retrieving user account settings form firebase");
 
         UserAccountSettings settings = new UserAccountSettings();

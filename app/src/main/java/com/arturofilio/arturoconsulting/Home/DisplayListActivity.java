@@ -49,8 +49,10 @@ public class DisplayListActivity extends AppCompatActivity {
         setContentView(R.layout.recycler_view);
         Log.d(TAG, "onCreate: startted.");
 
+
         initImagebitmap();
         setupBottomNavigationView();
+        setupFirebaseAuth();
     }
 
     /**

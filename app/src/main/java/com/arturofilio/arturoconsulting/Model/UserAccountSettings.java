@@ -6,17 +6,17 @@ public class UserAccountSettings {
     private long friends;
     private long photos;
     private String name;
-    private String fat;
-    private String bmi;
-    private String muscle_mass;
-    private String daily_activity;
-    private String height;
-    private String weight;
+    private long fat;
+    private long bmi;
+    private long muscle_mass;
+    private long daily_activity;
+    private long height;
+    private long weight;
     private String profile_photo;
 
-    public UserAccountSettings(String description, long friends, long photos, String name, String fat,
-                               String bmi, String muscle_mass, String daily_activity, String height,
-                               String weight, String profile_photo) {
+    public UserAccountSettings(String description, long friends, long photos, String name,
+                               long fat, long bmi, long muscle_mass, long daily_activity,
+                               long height, long weight, String profile_photo) {
         this.description = description;
         this.friends = friends;
         this.photos = photos;
@@ -66,51 +66,51 @@ public class UserAccountSettings {
         this.name = name;
     }
 
-    public String getFat() {
+    public long getFat() {
         return fat;
     }
 
-    public void setFat(String fat) {
+    public void setFat(long fat) {
         this.fat = fat;
     }
 
-    public String getBmi() {
+    public long getBmi() {
         return bmi;
     }
 
-    public void setBmi(String bmi) {
+    public void setBmi(long bmi) {
         this.bmi = bmi;
     }
 
-    public String getMuscle_mass() {
+    public long getMuscle_mass() {
         return muscle_mass;
     }
 
-    public void setMuscle_mass(String muscle_mass) {
+    public void setMuscle_mass(long muscle_mass) {
         this.muscle_mass = muscle_mass;
     }
 
-    public String getDaily_activity() {
+    public long getDaily_activity() {
         return daily_activity;
     }
 
-    public void setDaily_activity(String daily_activity) {
+    public void setDaily_activity(long daily_activity) {
         this.daily_activity = daily_activity;
     }
 
-    public String getHeight() {
+    public long getHeight() {
         return height;
     }
 
-    public void setHeight(String height) {
+    public void setHeight(long height) {
         this.height = height;
     }
 
-    public String getWeight() {
+    public long getWeight() {
         return weight;
     }
 
-    public void setWeight(String weight) {
+    public void setWeight(long weight) {
         this.weight = weight;
     }
 

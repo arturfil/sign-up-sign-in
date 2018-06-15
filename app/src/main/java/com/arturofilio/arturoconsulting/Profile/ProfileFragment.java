@@ -22,6 +22,7 @@ import com.arturofilio.arturoconsulting.Model.UserAccountSettings;
 import com.arturofilio.arturoconsulting.Model.UserSettings;
 import com.arturofilio.arturoconsulting.R;
 import com.arturofilio.arturoconsulting.Utils.BottomNavigationViewHelper;
+import com.arturofilio.arturoconsulting.Utils.FirebaseMethods;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -44,6 +45,7 @@ public class ProfileFragment extends Fragment {
     private FirebaseAuth.AuthStateListener mAuthListener;
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference myRef;
+    private FirebaseMethods mFirebaseMethods;
 
     private TextView mUsername, mWebsite, mFat, mMuscleMass, mBMI, mDailyAct, mHeight, mWeight;
     private ProgressBar mProgressBar;
@@ -71,11 +73,14 @@ public class ProfileFragment extends Fragment {
         mProgressBar = (ProgressBar) view.findViewById(R.id.progressBar);
         gridView = (GridView) view.findViewById(R.id.gridView);
         bottomNavigationViewEx = (BottomNavigationViewEx) view.findViewById(R.id.bottomNavigationViewBar);
+        mFirebaseMethods = new FirebaseMethods(getActivity());
         mContext = getActivity();
 
         Log.d(TAG, "onCreateView: started");
 
         setupBottomNavigationView();
+        setupFirebaseAuth();
+
         return view;
     }
 
@@ -85,7 +90,19 @@ public class ProfileFragment extends Fragment {
         User user = userSettings.getUser();
         UserAccountSettings settings = userSettings.getSetting();
 
-//        Univ.setImage(settings.getProfile_photo(), mProfileImage, null);   <===== STILL NEED TO CHANGE THIS!
+//        UniversalImageLoader.setImage(settings.getProfile_photo(), mProfileImage, null, "");
+
+        mUsername.setText(settings.getName());
+        mWeight.setText(String.valueOf(settings.getWeight()));
+        mDailyAct.setText(String.valueOf(settings.getDaily_activity()));
+        mWeight.setText(String.valueOf(settings.getWeight()));
+        mHeight.setText(String.valueOf(settings.getHeight()));
+        mFat.setText(String.valueOf(settings.getFat()));
+        mMuscleMass.setText(String.valueOf(settings.getMuscle_mass()));
+        mBMI.setText(String.valueOf(settings.getBmi()));
+        mWebsite.setText(settings.getDescription());
+
+//        mProgressBar.setVisibility(View.GONE);
     }
 
     /**
@@ -137,6 +154,7 @@ public class ProfileFragment extends Fragment {
             public void onDataChange(DataSnapshot dataSnapshot) {
 
                 //retrieve user information from the database
+                setProfileWidgets(mFirebaseMethods.getUserSettings(dataSnapshot));
 
                 //retrieve images for the user in question
 
