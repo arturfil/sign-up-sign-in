@@ -95,64 +95,241 @@
                     android:textSize="16sp"
                     />
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/desc_bmi"
-                    android:textColor="@color/black"
-                    android:text="Body Mass Index = 3x"
-                    android:textSize="16sp"
-                    android:layout_marginTop="5dp"
-                    />
+                    android:weightSum="100">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/desc_muscle"
-                    android:textColor="@color/black"
-                    android:text="Muscle Mass % = 40%"
-                    android:textSize="16sp"
-                    android:layout_marginTop="5dp"
-                    />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/desc_fat"
-                    android:textColor="@color/black"
-                    android:text="Body Fat % = 40%"
-                    android:textSize="16sp"
-                    android:layout_marginTop="5dp"
-                    />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Body Mass Index = "
+                            android:textSize="16sp"
+                            android:id="@+id/label_bmi"
+                            android:textColor="@color/black"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/desc_height"
-                    android:textColor="@color/black"
-                    android:text="Height = 6,1' FT."
-                    android:textSize="16sp"
-                    android:layout_marginTop="5dp"
-                    />
+                    </RelativeLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/desc_weight"
-                    android:textColor="@color/black"
-                    android:text="Weigth = 173 LBs."
-                    android:textSize="16sp"
-                    android:layout_marginTop="5dp"
-                    />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40">
 
-                <TextView
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/desc_bmi"
+                            android:textColor="@color/black"
+                            android:text="Body Mass Index = 3x"
+                            android:textSize="16sp"
+                            />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/desc_activity"
-                    android:text="Daily Activity = Moderate"
-                    android:layout_marginTop="5dp"
-                    android:textSize="16sp"
-                    android:textColor="@color/black"/>
+                    android:weightSum="100">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Muscle Mass = "
+                            android:textSize="16sp"
+                            android:id="@+id/label_muscle"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/desc_muscle"
+                            android:textColor="@color/black"
+                            android:text="Muscle Mass"
+                            android:textSize="16sp"
+                            />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="100">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Fat% = "
+                            android:textSize="16sp"
+                            android:id="@+id/label_fat"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/desc_fat"
+                            android:textColor="@color/black"
+                            android:text="Fat%"
+                            android:textSize="16sp"
+                            />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="100">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Height ="
+                            android:textSize="16sp"
+                            android:id="@+id/label_height"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/desc_height"
+                            android:textColor="@color/black"
+                            android:text="2.00m"
+                            android:textSize="16sp"
+                            />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="100">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Weight ="
+                            android:textSize="16sp"
+                            android:id="@+id/label_weight"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/desc_weight"
+                            android:textColor="@color/black"
+                            android:text="190 Kg."
+                            android:textSize="16sp"
+                            />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="100">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="60">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Daily Activity ="
+                            android:textSize="16sp"
+                            android:id="@+id/label_activity"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="40">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/desc_activity"
+                            android:textColor="@color/black"
+                            android:text="High"
+                            android:textSize="16sp"
+                            />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
 
                 <TextView
                     android:layout_width="match_parent"
